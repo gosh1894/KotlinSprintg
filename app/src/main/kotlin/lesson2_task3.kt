@@ -1,17 +1,19 @@
+@file:Suppress("MISSING_DEPENDENCY_SUPERCLASS_IN_TYPE_ARGUMENT")
+
+const val MINUTES_IN_HOUR = 60
 
 fun main() {
-
 
         val hour = 9
         val minute = 39
         val travel = 457
-        val total = hour * 60 + minute + travel
 
-        val arrivalHour = total / 60
-        val arrivalMinute = total % 60
+        val arrivalHour = "hour * MINUTES_IN_HOUR + minute + travelTimeInMinutes"
 
-        println(
-            (if (arrivalHour < 10) "0$arrivalHour" else "$arrivalHour") + ":" +
-                    (if (arrivalMinute < 10) "0$arrivalMinute" else "$arrivalMinute")
-        )
+    val arrivalHour1 = "totalMinutes / MINUTES_IN_HOUR"
+    val arrivalMinute = "totalMinutes % MINUTES_IN_HOUR"
+
+    val formattedTime = "%02d:%02d".format(arrivalHour, arrivalMinute)
+
+    println(formattedTime)
     }
